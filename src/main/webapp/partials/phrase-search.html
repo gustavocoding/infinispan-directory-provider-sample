@@ -1,0 +1,19 @@
+<form class="form-horizontal" role="form" ng-submit="searchPhrase()">
+    <div class="form-group">
+        <label for="text" class="col-sm-2 control-label">Query</label>
+
+        <div class="col-sm-5">
+            <input type="text" ng-model="query" class="form-control" id="text" placeholder="Type a lucene query"/>
+            <input type="submit" class="btn btn-primary" value="Search"/>
+        </div>
+    </div>
+</form>
+<table class="table phrasetable" ng-show="results">
+    <tr>
+        <td><h3>Results</h3></td>
+        <td></td>
+    </tr>
+    <tr ng-repeat="result in results">
+        <td>{{result.text}}</td>
+    </tr>
+</table>

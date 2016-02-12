@@ -1,0 +1,15 @@
+<a ui-sref="newPhrase" class="btn-primary btn-lg nodecoration">Add New phrase</a>
+
+<table class="table phrasetable">
+    <tr>
+        <td><h3>All Phrases</h3></td>
+        <td></td>
+    </tr>
+    <tr ng-repeat="phrase in phrases">
+        <td>{{phrase.text}}</td>
+        <td>
+            <a class="btn btn-primary" ui-sref="viewPhrase({id:phrase.id})">View</a>
+            <a class="btn btn-danger"  ng-click="deletePhrase(phrase)">Delete</a>
+        </td>
+    </tr>
+</table>
